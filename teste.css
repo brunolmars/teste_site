@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.game-link {
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    line-height: 200px;
+    margin: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.game-link:hover {
+    background-color: #555;
+}
