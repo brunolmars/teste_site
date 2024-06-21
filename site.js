@@ -14,14 +14,7 @@ Vue.component('game-item', {
             {{ game.nome }}
         </a>
     `,
-    methods: {
-        openGame(gameName) {
-            // lógica para abrir o jogo específico
-            alert(`Abrindo ${gameName}...`);
-            
-        }
-    }
-});
+
 
 new Vue({
     el: '#app',
