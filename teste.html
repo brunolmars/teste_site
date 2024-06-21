@@ -1,20 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site de Jogos</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Menu de Jogos</title>
 </head>
 <body>
-    <div class="container">
-        <h1>JOGOS</h1>
-        <div class="games">
-            <a href="#" class="game-link">Jogo 1</a>
-            <a href="#" class="game-link">Jogo 2</a>
-            <a href="#" class="game-link">Jogo 3</a>
-            
-        </div>
+    <h1>Menu de Jogos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+                <th>Nota</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="(game, index) in games" :key="index">
+                <td>{{ game.nome }}</td>
+                <td>{{ game.descricao }}</td>
+                <td>{{ game.preco }}</td>
+                <td>{{ game.nota }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="app">
+        <game-list :games="games"></game-list>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.16/dist/vue.js"></script>
+    <script src="/src/main.js" type="module"></script>
 </body>
 </html>
+
